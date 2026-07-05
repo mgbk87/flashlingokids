@@ -1,0 +1,716 @@
+{
+  "categories": [
+    {
+      "id": "domestic-animals",
+      "name": "Domestic Animals",
+      "cards": [
+        {
+          "id": "dog",
+          "word": "Dog",
+          "image": "images/animals/domestic-animals/dog.jpg"
+        },
+        {
+          "id": "cat",
+          "word": "Cat",
+          "image": "images/animals/domestic-animals/cat.jpg"
+        },
+        {
+          "id": "fish",
+          "word": "Fish",
+          "image": "images/animals/domestic-animals/fish.jpg"
+        },
+        {
+          "id": "mouse",
+          "word": "Mouse",
+          "image": "images/animals/domestic-animals/mouse.jpg"
+        },
+        {
+          "id": "turtle",
+          "word": "Turtle",
+          "image": "images/animals/domestic-animals/turtle.jpg"
+        },
+        {
+          "id": "parrot",
+          "word": "Parrot",
+          "image": "images/animals/domestic-animals/parrot.jpg"
+        },
+        {
+          "id": "canary",
+          "word": "Canary",
+          "image": "images/animals/domestic-animals/canary.jpg"
+        },
+        {
+          "id": "hamster",
+          "word": "Hamster",
+          "image": "images/animals/domestic-animals/hamster.jpg"
+        },
+        {
+          "id": "chinchilla",
+          "word": "Chinchilla",
+          "image": "images/animals/domestic-animals/chinchilla.jpg"
+        },
+        {
+          "id": "guinea-pig",
+          "word": "Guinea Pig",
+          "image": "images/animals/domestic-animals/guinea-pig.jpg"
+        }
+      ]
+    },
+    {
+      "id": "farm-animals",
+      "name": "Farm Animals",
+      "cards": [
+        {
+          "id": "pg",
+          "word": "Pg",
+          "image": "images/animals/farm-animals/pg.jpg"
+        },
+        {
+          "id": "cow",
+          "word": "Cow",
+          "image": "images/animals/farm-animals/cow.jpg"
+        },
+        {
+          "id": "ram",
+          "word": "Ram",
+          "image": "images/animals/farm-animals/ram.jpg"
+        },
+        {
+          "id": "bee",
+          "word": "Bee",
+          "image": "images/animals/farm-animals/bee.jpg"
+        },
+        {
+          "id": "llama",
+          "word": "Llama",
+          "image": "images/animals/farm-animals/llama.jpg"
+        },
+        {
+          "id": "bull",
+          "word": "Bull",
+          "image": "images/animals/farm-animals/bull.jpg"
+        },
+        {
+          "id": "goat",
+          "word": "Goat",
+          "image": "images/animals/farm-animals/goat.jpg"
+        },
+        {
+          "id": "pony",
+          "word": "Pony",
+          "image": "images/animals/farm-animals/pony.jpg"
+        },
+        {
+          "id": "camel",
+          "word": "Camel",
+          "image": "images/animals/farm-animals/camel.jpg"
+        },
+        {
+          "id": "heep",
+          "word": "Heep",
+          "image": "images/animals/farm-animals/heep.jpg"
+        },
+        {
+          "id": "coypu",
+          "word": "Coypu",
+          "image": "images/animals/farm-animals/coypu.jpg"
+        },
+        {
+          "id": "horse",
+          "word": "Horse",
+          "image": "images/animals/farm-animals/horse.jpg"
+        },
+        {
+          "id": "rabbit",
+          "word": "Rabbit",
+          "image": "images/animals/farm-animals/rabbit.jpg"
+        },
+        {
+          "id": "donkey",
+          "word": "Donkey",
+          "image": "images/animals/farm-animals/donkey.jpg"
+        },
+        {
+          "id": "reindeer",
+          "word": "Reindeer",
+          "image": "images/animals/farm-animals/reindeer.jpg"
+        }
+      ]
+    },
+    {
+      "id": "forest-animals",
+      "name": "Forest Animals",
+      "cards": [
+        {
+          "id": "fox",
+          "word": "Fox",
+          "image": "images/animals/forest-animals/fox.jpg"
+        },
+        {
+          "id": "bear",
+          "word": "Bear",
+          "image": "images/animals/forest-animals/bear.jpg"
+        },
+        {
+          "id": "wolf",
+          "word": "Wolf",
+          "image": "images/animals/forest-animals/wolf.jpg"
+        },
+        {
+          "id": "hare",
+          "word": "Hare",
+          "image": "images/animals/forest-animals/hare.jpg"
+        },
+        {
+          "id": "deer",
+          "word": "Deer",
+          "image": "images/animals/forest-animals/deer.jpg"
+        },
+        {
+          "id": "lynx",
+          "word": "Lynx",
+          "image": "images/animals/forest-animals/lynx.jpg"
+        },
+        {
+          "id": "boar",
+          "word": "Boar",
+          "image": "images/animals/forest-animals/boar.jpg"
+        },
+        {
+          "id": "mole",
+          "word": "Mole",
+          "image": "images/animals/forest-animals/mole.jpg"
+        },
+        {
+          "id": "bison",
+          "word": "Bison",
+          "image": "images/animals/forest-animals/bison.jpg"
+        },
+        {
+          "id": "moose",
+          "word": "Moose",
+          "image": "images/animals/forest-animals/moose.jpg"
+        },
+        {
+          "id": "sloth",
+          "word": "Sloth",
+          "image": "images/animals/forest-animals/sloth.jpg"
+        },
+        {
+          "id": "skunk",
+          "word": "Skunk",
+          "image": "images/animals/forest-animals/skunk.jpg"
+        },
+        {
+          "id": "coyote",
+          "word": "Coyote",
+          "image": "images/animals/forest-animals/coyote.jpg"
+        },
+        {
+          "id": "marmot",
+          "word": "Marmot",
+          "image": "images/animals/forest-animals/marmot.jpg"
+        },
+        {
+          "id": "ferret",
+          "word": "Ferret",
+          "image": "images/animals/forest-animals/ferret.jpg"
+        },
+        {
+          "id": "badger",
+          "word": "Badger",
+          "image": "images/animals/forest-animals/badger.jpg"
+        },
+        {
+          "id": "buffalo",
+          "word": "Buffalo",
+          "image": "images/animals/forest-animals/buffalo.jpg"
+        },
+        {
+          "id": "raccoon",
+          "word": "Raccoon",
+          "image": "images/animals/forest-animals/raccoon.jpg"
+        },
+        {
+          "id": "chipmunk",
+          "word": "Chipmunk",
+          "image": "images/animals/forest-animals/chipmunk.jpg"
+        },
+        {
+          "id": "squirrel",
+          "word": "Squirrel",
+          "image": "images/animals/forest-animals/squirrel.jpg"
+        },
+        {
+          "id": "hedgehog",
+          "word": "Hedgehog",
+          "image": "images/animals/forest-animals/hedgehog.jpg"
+        },
+        {
+          "id": "wolverine",
+          "word": "Wolverine",
+          "image": "images/animals/forest-animals/wolverine.jpg"
+        }
+      ]
+    },
+    {
+      "id": "arctic-animals",
+      "name": "Arctic Animals",
+      "cards": [
+        {
+          "id": "owl",
+          "word": "Owl",
+          "image": "images/animals/arctic-animals/owl.jpg"
+        },
+        {
+          "id": "seal",
+          "word": "Seal",
+          "image": "images/animals/arctic-animals/seal.jpg"
+        },
+        {
+          "id": "whale",
+          "word": "Whale",
+          "image": "images/animals/arctic-animals/whale.jpg"
+        },
+        {
+          "id": "beluga",
+          "word": "Beluga",
+          "image": "images/animals/arctic-animals/beluga.jpg"
+        },
+        {
+          "id": "walrus",
+          "word": "Walrus",
+          "image": "images/animals/arctic-animals/walrus.jpg"
+        },
+        {
+          "id": "muskox",
+          "word": "Muskox",
+          "image": "images/animals/arctic-animals/muskox.jpg"
+        },
+        {
+          "id": "narwhal",
+          "word": "Narwhal",
+          "image": "images/animals/arctic-animals/narwhal.jpg"
+        },
+        {
+          "id": "penguin",
+          "word": "Penguin",
+          "image": "images/animals/arctic-animals/penguin.jpg"
+        },
+        {
+          "id": "fur-seal",
+          "word": "Fur Seal",
+          "image": "images/animals/arctic-animals/fur-seal.jpg"
+        },
+        {
+          "id": "arctic-fox",
+          "word": "Arctic Fox",
+          "image": "images/animals/arctic-animals/arctic-fox.jpg"
+        },
+        {
+          "id": "polar-bear",
+          "word": "Polar Bear",
+          "image": "images/animals/arctic-animals/polar-bear.jpg"
+        },
+        {
+          "id": "arctic-wolf",
+          "word": "Arctic Wolf",
+          "image": "images/animals/arctic-animals/arctic-wolf.jpg"
+        },
+        {
+          "id": "giant-squid",
+          "word": "Giant Squid",
+          "image": "images/animals/arctic-animals/giant-squid.jpg"
+        },
+        {
+          "id": "orca-killer-whale",
+          "word": "Orca, Killer Whale",
+          "image": "images/animals/arctic-animals/orca-killer-whale.jpg"
+        }
+      ]
+    },
+    {
+      "id": "jungle-animals",
+      "name": "Jungle Animals",
+      "cards": [
+        {
+          "id": "lion",
+          "word": "Lion",
+          "image": "images/animals/jungle-animals/lion.jpg"
+        },
+        {
+          "id": "panda",
+          "word": "Panda",
+          "image": "images/animals/jungle-animals/panda.jpg"
+        },
+        {
+          "id": "tapir",
+          "word": "Tapir",
+          "image": "images/animals/jungle-animals/tapir.jpg"
+        },
+        {
+          "id": "zebra",
+          "word": "Zebra",
+          "image": "images/animals/jungle-animals/zebra.jpg"
+        },
+        {
+          "id": "tiger",
+          "word": "Tiger",
+          "image": "images/animals/jungle-animals/tiger.jpg"
+        },
+        {
+          "id": "ocelot",
+          "word": "Ocelot",
+          "image": "images/animals/jungle-animals/ocelot.jpg"
+        },
+        {
+          "id": "jaguar",
+          "word": "Jaguar",
+          "image": "images/animals/jungle-animals/jaguar.jpg"
+        },
+        {
+          "id": "gibbon",
+          "word": "Gibbon",
+          "image": "images/animals/jungle-animals/gibbon.jpg"
+        },
+        {
+          "id": "monkey",
+          "word": "Monkey",
+          "image": "images/animals/jungle-animals/monkey.jpg"
+        },
+        {
+          "id": "sifaka",
+          "word": "Sifaka",
+          "image": "images/animals/jungle-animals/sifaka.jpg"
+        },
+        {
+          "id": "leopard",
+          "word": "Leopard",
+          "image": "images/animals/jungle-animals/leopard.jpg"
+        },
+        {
+          "id": "gorilla",
+          "word": "Gorilla",
+          "image": "images/animals/jungle-animals/gorilla.jpg"
+        },
+        {
+          "id": "cheetah",
+          "word": "Cheetah",
+          "image": "images/animals/jungle-animals/cheetah.jpg"
+        },
+        {
+          "id": "giraffe",
+          "word": "Giraffe",
+          "image": "images/animals/jungle-animals/giraffe.jpg"
+        },
+        {
+          "id": "anteater",
+          "word": "Anteater",
+          "image": "images/animals/jungle-animals/anteater.jpg"
+        },
+        {
+          "id": "elephant",
+          "word": "Elephant",
+          "image": "images/animals/jungle-animals/elephant.jpg"
+        },
+        {
+          "id": "crocodile",
+          "word": "Crocodile",
+          "image": "images/animals/jungle-animals/crocodile.jpg"
+        },
+        {
+          "id": "red-panda",
+          "word": "Red Panda",
+          "image": "images/animals/jungle-animals/red-panda.jpg"
+        },
+        {
+          "id": "rhinoceros",
+          "word": "Rhinoceros",
+          "image": "images/animals/jungle-animals/rhinoceros.jpg"
+        },
+        {
+          "id": "white-tiger",
+          "word": "White Tiger",
+          "image": "images/animals/jungle-animals/white-tiger.jpg"
+        },
+        {
+          "id": "hippopotamus",
+          "word": "Hippopotamus",
+          "image": "images/animals/jungle-animals/hippopotamus.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sea-animals",
+      "name": "Sea Animals",
+      "cards": [
+        {
+          "id": "seal",
+          "word": "Seal",
+          "image": "images/animals/sea-animals/seal.jpg"
+        },
+        {
+          "id": "crab",
+          "word": "Crab",
+          "image": "images/animals/sea-animals/crab.jpg"
+        },
+        {
+          "id": "coral",
+          "word": "Coral",
+          "image": "images/animals/sea-animals/coral.jpg"
+        },
+        {
+          "id": "shark",
+          "word": "Shark",
+          "image": "images/animals/sea-animals/shark.jpg"
+        },
+        {
+          "id": "snail",
+          "word": "Snail",
+          "image": "images/animals/sea-animals/snail.jpg"
+        },
+        {
+          "id": "squid",
+          "word": "Squid",
+          "image": "images/animals/sea-animals/squid.jpg"
+        },
+        {
+          "id": "shell",
+          "word": "Shell",
+          "image": "images/animals/sea-animals/shell.jpg"
+        },
+        {
+          "id": "whale",
+          "word": "Whale",
+          "image": "images/animals/sea-animals/whale.jpg"
+        },
+        {
+          "id": "beluga",
+          "word": "Beluga",
+          "image": "images/animals/sea-animals/beluga.jpg"
+        },
+        {
+          "id": "shrimp",
+          "word": "Shrimp",
+          "image": "images/animals/sea-animals/shrimp.jpg"
+        },
+        {
+          "id": "walrus",
+          "word": "Walrus",
+          "image": "images/animals/sea-animals/walrus.jpg"
+        },
+        {
+          "id": "dolphin",
+          "word": "Dolphin",
+          "image": "images/animals/sea-animals/dolphin.jpg"
+        },
+        {
+          "id": "narwhal",
+          "word": "Narwhal",
+          "image": "images/animals/sea-animals/narwhal.jpg"
+        },
+        {
+          "id": "lobster",
+          "word": "Lobster",
+          "image": "images/animals/sea-animals/lobster.jpg"
+        },
+        {
+          "id": "seaweed",
+          "word": "Seaweed",
+          "image": "images/animals/sea-animals/seaweed.jpg"
+        },
+        {
+          "id": "octopus",
+          "word": "Octopus",
+          "image": "images/animals/sea-animals/octopus.jpg"
+        },
+        {
+          "id": "fur-seal",
+          "word": "Fur Seal",
+          "image": "images/animals/sea-animals/fur-seal.jpg"
+        },
+        {
+          "id": "seahorse",
+          "word": "Seahorse",
+          "image": "images/animals/sea-animals/seahorse.jpg"
+        },
+        {
+          "id": "stingray",
+          "word": "Stingray",
+          "image": "images/animals/sea-animals/stingray.jpg"
+        },
+        {
+          "id": "crayfish",
+          "word": "Crayfish",
+          "image": "images/animals/sea-animals/crayfish.jpg"
+        },
+        {
+          "id": "starfish",
+          "word": "Starfish",
+          "image": "images/animals/sea-animals/starfish.jpg"
+        },
+        {
+          "id": "nautilus",
+          "word": "Nautilus",
+          "image": "images/animals/sea-animals/nautilus.jpg"
+        },
+        {
+          "id": "jellyfish",
+          "word": "Jellyfish",
+          "image": "images/animals/sea-animals/jellyfish.jpg"
+        },
+        {
+          "id": "sea-turtle",
+          "word": "Sea Turtle",
+          "image": "images/animals/sea-animals/sea-turtle.jpg"
+        },
+        {
+          "id": "sea-urchin",
+          "word": "Sea Urchin",
+          "image": "images/animals/sea-animals/sea-urchin.jpg"
+        },
+        {
+          "id": "sea-anemone",
+          "word": "Sea Anemone",
+          "image": "images/animals/sea-animals/sea-anemone.jpg"
+        },
+        {
+          "id": "sperm-whale",
+          "word": "Sperm Whale",
+          "image": "images/animals/sea-animals/sperm-whale.jpg"
+        },
+        {
+          "id": "giant-squid",
+          "word": "Giant Squid",
+          "image": "images/animals/sea-animals/giant-squid.jpg"
+        },
+        {
+          "id": "orca-killer-whale",
+          "word": "Orca, Killer Whale",
+          "image": "images/animals/sea-animals/orca-killer-whale.jpg"
+        }
+      ]
+    },
+    {
+      "id": "insects",
+      "name": "Insects",
+      "cards": [
+        {
+          "id": "fly",
+          "word": "Fly",
+          "image": "images/animals/insects/fly.jpg"
+        },
+        {
+          "id": "ant",
+          "word": "Ant",
+          "image": "images/animals/insects/ant.jpg"
+        },
+        {
+          "id": "bug",
+          "word": "Bug",
+          "image": "images/animals/insects/bug.jpg"
+        },
+        {
+          "id": "bee",
+          "word": "Bee",
+          "image": "images/animals/insects/bee.jpg"
+        },
+        {
+          "id": "wasp",
+          "word": "Wasp",
+          "image": "images/animals/insects/wasp.jpg"
+        },
+        {
+          "id": "mite",
+          "word": "Mite",
+          "image": "images/animals/insects/mite.jpg"
+        },
+        {
+          "id": "louse",
+          "word": "Louse",
+          "image": "images/animals/insects/louse.jpg"
+        },
+        {
+          "id": "spider",
+          "word": "Spider",
+          "image": "images/animals/insects/spider.jpg"
+        },
+        {
+          "id": "hornet",
+          "word": "Hornet",
+          "image": "images/animals/insects/hornet.jpg"
+        },
+        {
+          "id": "mantis",
+          "word": "Mantis",
+          "image": "images/animals/insects/mantis.jpg"
+        },
+        {
+          "id": "bedbug",
+          "word": "Bedbug",
+          "image": "images/animals/insects/bedbug.jpg"
+        },
+        {
+          "id": "ladybug",
+          "word": "Ladybug",
+          "image": "images/animals/insects/ladybug.jpg"
+        },
+        {
+          "id": "termite",
+          "word": "Termite",
+          "image": "images/animals/insects/termite.jpg"
+        },
+        {
+          "id": "scorpion",
+          "word": "Scorpion",
+          "image": "images/animals/insects/scorpion.jpg"
+        },
+        {
+          "id": "mosquito",
+          "word": "Mosquito",
+          "image": "images/animals/insects/mosquito.jpg"
+        },
+        {
+          "id": "bumblebee",
+          "word": "Bumblebee",
+          "image": "images/animals/insects/bumblebee.jpg"
+        },
+        {
+          "id": "cockroach",
+          "word": "Cockroach",
+          "image": "images/animals/insects/cockroach.jpg"
+        },
+        {
+          "id": "millipede",
+          "word": "Millipede",
+          "image": "images/animals/insects/millipede.jpg"
+        },
+        {
+          "id": "dragonfly",
+          "word": "Dragonfly",
+          "image": "images/animals/insects/dragonfly.jpg"
+        },
+        {
+          "id": "butterfly",
+          "word": "Butterfly",
+          "image": "images/animals/insects/butterfly.jpg"
+        },
+        {
+          "id": "scarabaeus",
+          "word": "Scarabaeus",
+          "image": "images/animals/insects/scarabaeus.jpg"
+        },
+        {
+          "id": "caterpillar",
+          "word": "Caterpillar",
+          "image": "images/animals/insects/caterpillar.jpg"
+        },
+        {
+          "id": "grasshopper",
+          "word": "Grasshopper",
+          "image": "images/animals/insects/grasshopper.jpg"
+        }
+      ]
+    }
+  ]
+}
