@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>FlashLingoKids - Learn Animal Words</title>
-<meta name="description" content="A fun flashcard app for kids to learn animal vocabulary through pictures, words, and quizzes.">
+<title>FlashLingoKids - Flashcards for Kids Ages 2-5</title>
+<meta name="description" content="A colorful flashcard app for kids ages 2-5 that builds vocabulary and memory through pictures, words, and quizzes across many fun categories.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,17 @@
 
   <!-- HOME SCREEN -->
   <section class="screen active" id="screen-home" aria-label="Home">
+    <div class="home-decor" aria-hidden="true">
+      <span class="decor-item" style="--x:4%; --y:14%; --delay:0s;">🐶</span>
+      <span class="decor-item" style="--x:88%; --y:10%; --delay:0.6s;">🍎</span>
+      <span class="decor-item" style="--x:8%; --y:78%; --delay:1.2s;">🍓</span>
+      <span class="decor-item" style="--x:92%; --y:72%; --delay:0.3s;">🦊</span>
+      <span class="decor-item" style="--x:50%; --y:6%; --delay:0.9s;">🦁</span>
+      <span class="decor-item" style="--x:18%; --y:46%; --delay:1.5s;">🐬</span>
+      <span class="decor-item" style="--x:80%; --y:42%; --delay:0.2s;">🥕</span>
+      <span class="decor-item" style="--x:60%; --y:88%; --delay:1s;">🐞</span>
+    </div>
+
     <header class="app-header">
       <h1 class="app-title"><span aria-hidden="true">🦁</span> FlashLingoKids</h1>
       <button class="icon-btn" id="btn-settings" aria-label="Open parent settings">⚙️</button>
@@ -38,15 +49,25 @@
     </div>
 
     <main class="home-main">
-      <p class="home-tagline">Pick a mode to start learning animal words!</p>
+      <section class="home-intro" aria-label="About FlashLingoKids">
+        <p class="home-intro-lead">A colorful flashcard adventure made for little learners aged <strong>2&ndash;5</strong>!</p>
+        <ul class="home-features">
+          <li class="home-feature"><span class="home-feature-icon" aria-hidden="true">🧒</span><span>Made for kids ages 2&ndash;5</span></li>
+          <li class="home-feature"><span class="home-feature-icon" aria-hidden="true">🖼️</span><span>Learn with fun picture flashcards</span></li>
+          <li class="home-feature"><span class="home-feature-icon" aria-hidden="true">🧠</span><span>Helps improve memory &amp; recall</span></li>
+          <li class="home-feature"><span class="home-feature-icon" aria-hidden="true">🗂️</span><span>Many categories &mdash; with more on the way!</span></li>
+        </ul>
+      </section>
+
+      <p class="home-tagline">Pick a mode to start learning!</p>
       <div class="mode-buttons">
         <button class="mode-btn mode-btn--learn" data-mode="learning">
           <span class="mode-btn-icon" aria-hidden="true">📖</span>
           <span class="mode-btn-label">Learning Mode</span>
         </button>
         <button class="mode-btn mode-btn--test" data-mode="test">
-          <span class="mode-btn-icon" aria-hidden="true">🎯</span>
-          <span class="mode-btn-label">Test Mode</span>
+          <span class="mode-btn-icon" aria-hidden="true">🧩</span>
+          <span class="mode-btn-label">Quiz Mode</span>
         </button>
       </div>
     </main>
@@ -55,17 +76,17 @@
   <!-- CATEGORY SELECT SCREEN -->
   <section class="screen" id="screen-categories" aria-label="Choose a category">
     <header class="app-header">
-      <button class="icon-btn" id="btn-back-to-home" aria-label="Back to home">⬅️</button>
+      <button class="icon-btn icon-btn--back" id="btn-back-to-home" aria-label="Back to home">⬅️</button>
       <h1 class="app-title" id="categories-title">Choose a Category</h1>
       <span class="icon-btn-spacer" aria-hidden="true"></span>
     </header>
-    <main class="categories-main" id="categories-grid" role="list"></main>
+    <main class="categories-main" id="categories-grid"></main>
   </section>
 
   <!-- LEARNING PLAY SCREEN -->
   <section class="screen" id="screen-learning" aria-label="Learning mode">
     <header class="app-header">
-      <button class="icon-btn" id="btn-learning-back" aria-label="Back to categories">⬅️</button>
+      <button class="icon-btn icon-btn--back" id="btn-learning-back" aria-label="Back to categories">⬅️</button>
       <span class="progress-pill" id="learning-progress-pill">1 / 10</span>
       <span class="icon-btn-spacer" aria-hidden="true"></span>
     </header>
@@ -84,9 +105,9 @@
   </section>
 
   <!-- TEST PLAY SCREEN -->
-  <section class="screen" id="screen-test" aria-label="Test mode">
+  <section class="screen" id="screen-test" aria-label="Quiz mode">
     <header class="app-header">
-      <button class="icon-btn" id="btn-test-back" aria-label="Quit quiz">⬅️</button>
+      <button class="icon-btn icon-btn--back" id="btn-test-back" aria-label="Quit quiz">⬅️</button>
       <span class="progress-pill" id="test-progress-pill">Question 1 / 10</span>
       <span class="score-pill" id="test-score-pill">⭐ 0</span>
     </header>

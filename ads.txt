@@ -1,0 +1,9 @@
+# Placeholder ads.txt for FlashLingoKids.
+# Once your Google AdSense account is approved, replace the line below with
+# the real line AdSense gives you (Settings > Sites > "Download ads.txt" in
+# your AdSense dashboard). It usually looks like:
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#
+# Publisher ID note: the "pub-..." value must match the data-ad-client
+# value used in index.html.
