@@ -87,7 +87,16 @@ button {
   justify-content: center;
 }
 .icon-btn:active { transform: scale(0.92); }
-.icon-btn-spacer { min-width: 44px; min-height: 44px; }
+
+/* Back-navigation buttons get an extra-large touch target since they're the
+   most frequently tapped control on every play/category screen. */
+.icon-btn--back {
+  min-width: 56px;
+  min-height: 56px;
+  font-size: 1.8rem;
+}
+
+.icon-btn-spacer { min-width: 56px; min-height: 56px; }
 
 /* ---------- Ad slots ---------- */
 .ad-slot {
@@ -98,16 +107,93 @@ button {
 }
 
 /* ---------- Home ---------- */
+#screen-home {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 15% 8%, #ffe9c2 0%, transparent 40%),
+    radial-gradient(circle at 85% 12%, #cdeeff 0%, transparent 42%),
+    radial-gradient(circle at 12% 85%, #ffd9e6 0%, transparent 45%),
+    radial-gradient(circle at 88% 80%, #d7f7de 0%, transparent 45%);
+}
+
+.home-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.decor-item {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  font-size: 2.4rem;
+  opacity: 0.35;
+  animation: decorFloat 4.5s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes decorFloat {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-14px) rotate(6deg); }
+}
+
+.home-header, .app-header, .home-main { position: relative; z-index: 1; }
+
 .home-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 20px 48px;
-  gap: 28px;
+  padding: 12px 20px 48px;
+  gap: 24px;
   text-align: center;
 }
+
+.home-intro {
+  background: #ffffffe6;
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  max-width: 480px;
+  box-shadow: var(--shadow-soft);
+  border: 3px dashed var(--color-accent);
+}
+
+.home-intro-lead {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.home-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: left;
+}
+
+.home-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.home-feature:nth-child(1) { background: #fff1d6; }
+.home-feature:nth-child(2) { background: #dcf1ff; }
+.home-feature:nth-child(3) { background: #ffe0ea; }
+.home-feature:nth-child(4) { background: #ddf6e2; }
+
+.home-feature-icon { font-size: 1.4rem; flex-shrink: 0; }
 
 .home-tagline {
   font-size: 1.2rem;
@@ -144,16 +230,31 @@ button {
 /* ---------- Category grid ---------- */
 .categories-main {
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   padding: 10px 20px 40px;
   max-width: 900px;
   margin: 0 auto;
   width: 100%;
 }
 
+.category-section-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text-soft);
+  margin: 0 0 12px;
+  padding-left: 4px;
+}
+
+.category-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
+}
+
 .category-card {
+  position: relative;
   background: var(--color-card-bg);
   border-radius: var(--radius-md);
   padding: 18px 12px;
@@ -172,16 +273,34 @@ button {
   width: 100%;
   height: 10px;
   border-radius: 6px;
-  background: #eee;
+  background: #e3e3e3;
   overflow: hidden;
 }
 .category-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-success), #7ed99a);
+  background: linear-gradient(90deg, var(--color-secondary-dark), var(--color-secondary));
   border-radius: 6px;
   transition: width 0.3s ease;
 }
 .category-progress-label { font-size: 0.8rem; color: var(--color-text-soft); }
+
+.category-complete-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-success);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid #fff;
+}
 
 /* ---------- Play screens (shared) ---------- */
 .play-main {
@@ -394,5 +513,9 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .screen, .flashcard-img, .confetti-piece { animation: none !important; }
+  .screen, .flashcard-img, .confetti-piece, .decor-item { animation: none !important; }
+}
+
+@media (max-width: 420px) {
+  .home-features { grid-template-columns: 1fr; }
 }

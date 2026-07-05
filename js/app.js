@@ -10,6 +10,30 @@ const CATEGORY_ICONS = {
   'jungle-animals': '🦁',
   'sea-animals': '🐬',
   insects: '🐞',
+  'wild-birds': '🦅',
+  'farm-birds': '🐓',
+  vegetables: '🥕',
+  berries: '🍓',
+  fruits: '🍎',
+  aircraft: '✈️',
+  'bicycle-transport': '🚲',
+  'land-transport': '🚗',
+  motorcycles: '🏍️',
+  'rail-transport': '🚆',
+  'water-transport': '⛵',
+  colors: '🎨',
+  rooms: '🚪',
+  furniture: '🛋️',
+  garden: '🌷',
+  house: '🏠',
+};
+
+const GROUP_LABELS = {
+  animals: 'Animals',
+  produce: 'Fruits & Vegetables',
+  transportation: 'Transportation',
+  colors: 'Colors',
+  home: 'Home',
 };
 
 const STORAGE_KEYS = {
@@ -102,7 +126,7 @@ const App = {
       btn.addEventListener('click', () => {
         this.currentMode = btn.dataset.mode;
         document.getElementById('categories-title').textContent =
-          this.currentMode === 'learning' ? 'Choose a Category to Learn' : 'Choose a Category to Test';
+          this.currentMode === 'learning' ? 'Choose a Category to Learn' : 'Choose a Category for a Quiz';
         this.renderCategoryGrid();
         this.showScreen('screen-categories');
       });
@@ -130,29 +154,58 @@ const App = {
   renderCategoryGrid() {
     const grid = document.getElementById('categories-grid');
     grid.innerHTML = '';
+
+    // Group categories by their `group` field (e.g. Animals, Fruits & Vegetables),
+    // preserving each category's order within its group and the order groups
+    // first appear in data/cards.json.
+    const groups = new Map();
     this.data.categories.forEach((cat) => {
-      const total = cat.cards.length;
-      const seen = Math.min(this.getSeenCount(cat.id), total);
-      const card = document.createElement('button');
-      card.className = 'category-card';
-      card.setAttribute('role', 'listitem');
-      card.innerHTML = `
-        <span class="category-icon" aria-hidden="true">${CATEGORY_ICONS[cat.id] || '🐾'}</span>
-        <span class="category-name">${cat.name}</span>
-        ${this.currentMode === 'learning' ? `
-          <span class="category-progress-track"><span class="category-progress-fill" style="width:${total ? (seen / total) * 100 : 0}%"></span></span>
-          <span class="category-progress-label">${seen} / ${total} seen</span>
-        ` : `<span class="category-progress-label">${total} cards</span>`}
-      `;
-      card.addEventListener('click', () => {
-        this.currentCategoryId = cat.id;
-        if (this.currentMode === 'learning') {
-          LearningMode.start(cat);
-        } else {
-          TestMode.start(cat);
-        }
+      const groupId = cat.group || 'other';
+      if (!groups.has(groupId)) groups.set(groupId, []);
+      groups.get(groupId).push(cat);
+    });
+
+    groups.forEach((cats, groupId) => {
+      const section = document.createElement('section');
+      section.className = 'category-section';
+      const heading = document.createElement('h3');
+      heading.className = 'category-section-title';
+      heading.textContent = GROUP_LABELS[groupId] || groupId;
+      section.appendChild(heading);
+
+      const sectionGrid = document.createElement('div');
+      sectionGrid.className = 'category-section-grid';
+      sectionGrid.setAttribute('role', 'list');
+
+      cats.forEach((cat) => {
+        const total = cat.cards.length;
+        const seen = Math.min(this.getSeenCount(cat.id), total);
+        const completed = total > 0 && seen >= total;
+        const card = document.createElement('button');
+        card.className = 'category-card';
+        card.setAttribute('role', 'listitem');
+        card.innerHTML = `
+          ${completed ? '<span class="category-complete-badge" aria-label="Category completed" title="Completed">✓</span>' : ''}
+          <span class="category-icon" aria-hidden="true">${CATEGORY_ICONS[cat.id] || '🐾'}</span>
+          <span class="category-name">${cat.name}</span>
+          ${this.currentMode === 'learning' ? `
+            <span class="category-progress-track"><span class="category-progress-fill" style="width:${total ? (seen / total) * 100 : 0}%"></span></span>
+            <span class="category-progress-label">${seen} / ${total} seen</span>
+          ` : `<span class="category-progress-label">${total} cards</span>`}
+        `;
+        card.addEventListener('click', () => {
+          this.currentCategoryId = cat.id;
+          if (this.currentMode === 'learning') {
+            LearningMode.start(cat);
+          } else {
+            TestMode.start(cat);
+          }
+        });
+        sectionGrid.appendChild(card);
       });
-      grid.appendChild(card);
+
+      section.appendChild(sectionGrid);
+      grid.appendChild(section);
     });
   },
 

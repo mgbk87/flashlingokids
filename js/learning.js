@@ -26,7 +26,7 @@ const LearningMode = {
     if (this._bound) return;
     this._bound = true;
     document.getElementById('btn-sound').addEventListener('click', () => {
-      App.speakWord(this.cards[this.index].word);
+      this.playDictation();
     });
     document.getElementById('btn-next-card').addEventListener('click', () => {
       if (this.index >= this.cards.length - 1) {
@@ -54,6 +54,21 @@ const LearningMode = {
     this.timers = [];
   },
 
+  // Plays the current card's dictation, locking Next until it finishes.
+  // Shared by the initial auto-play and the Sound button, so replaying the
+  // word (e.g. clicking Sound while the first playback is still going)
+  // re-locks and correctly re-unlocks Next instead of leaving it stuck -
+  // App.speakWord() cancels any in-flight utterance before starting a new
+  // one, which would otherwise skip the onAllDone callback that unlocks it.
+  playDictation() {
+    const nextBtn = document.getElementById('btn-next-card');
+    const myToken = this.playToken;
+    nextBtn.disabled = true;
+    App.speakWord(this.cards[this.index].word, () => {
+      if (myToken === this.playToken) nextBtn.disabled = false;
+    });
+  },
+
   showCompletion() {
     this.clearTimers();
     window.speechSynthesis.cancel();
@@ -65,7 +80,7 @@ const LearningMode = {
   showCard() {
     this.clearTimers();
     window.speechSynthesis.cancel();
-    const myToken = ++this.playToken;
+    ++this.playToken;
 
     const card = this.cards[this.index];
     const img = document.getElementById('learning-image');
@@ -104,9 +119,7 @@ const LearningMode = {
 
     this.timers.push(setTimeout(() => {
       wordEl.classList.add('visible');
-      App.speakWord(card.word, () => {
-        if (myToken === this.playToken) nextBtn.disabled = false;
-      });
+      this.playDictation();
     }, WORD_REVEAL_MS));
   },
 };
